@@ -6,7 +6,7 @@
     .top-cards {
         width: 80px;
         height: 80px;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     #score-card,
@@ -14,10 +14,18 @@
         font-size: 16px
     }
 
-        .game-cards {
-            width: 130px;
-            height: 80px;
-        }
+    .game-cards {
+        width: 130px;
+        height: 80px;
+    }
+
+    #catch-imoji {
+        width: 60%;
+    }
+
+    .game-cards>img {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width:275px) and (max-width:575px) {
@@ -28,7 +36,7 @@
     .top-cards {
         width: 80px;
         height: 80px;
-        font-size: 10px;
+        font-size: 15px;
     }
 
     #score-card,
@@ -36,10 +44,18 @@
         font-size: 17px
     }
 
-        .game-cards {
-            width: 150px;
-            height: 100px;
-        }
+    .game-cards {
+        width: 150px;
+        height: 100px;
+    }
+
+    #catch-imoji {
+        width: 60%;
+    }
+
+    .game-cards>img {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width:576px) and (max-width:767px) {
@@ -58,10 +74,18 @@
         font-size: 21px
     }
 
-        .game-cards {
-            width: 150px;
-            height: 100px;
-        }
+    .game-cards {
+        width: 150px;
+        height: 100px;
+    }
+
+    #catch-imoji {
+        width: 65%;
+    }
+
+    .game-cards>img {
+        width: 90%;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:991px) {
@@ -83,6 +107,10 @@
     .game-cards {
         width: 170px;
         height: 120px;
+    }
+
+    .game-cards>img {
+        width: 80%;
     }
 }
 
@@ -106,6 +134,10 @@
         width: 180px;
         height: 130px;
     }
+
+    #catch-imoji {
+        width: 70%;
+    }
 }
 
 @media screen and (min-width:1200px) {
@@ -127,6 +159,14 @@
     .game-cards {
         width: 200px;
         height: 150px;
+    }
+
+    #catch-imoji {
+        width: 70%;
+    }
+
+    .game-cards>img {
+        width: 70%;
     }
 }
 
@@ -167,4 +207,5 @@ body {
 .game-cards {
     border: 1px solid black;
     margin: 0 auto;
+    background-color: transparent;
 }
