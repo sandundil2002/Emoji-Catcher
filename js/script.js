@@ -1,3 +1,4 @@
+let timeLeft = document.getElementById("time-card");
 let emoji1 = document.getElementById("emoji-1");
 let emoji2 = document.getElementById("emoji-2");
 let emoji3 = document.getElementById("emoji-3");
@@ -8,6 +9,7 @@ let emoji7 = document.getElementById("emoji-7");
 let emoji8 = document.getElementById("emoji-8");
 let emoji9 = document.getElementById("emoji-9");
 let emoji10 = document.getElementById("emoji-10");
+let time = 60;
 let box1;
 let box2;
 let box3;
@@ -59,4 +61,22 @@ function display() {
   emojiArray[box10].setAttribute("src", "/assets/9197-skype-sleeping.gif");
 }
 
-setInterval(random, 300);
+// setInterval(random, 200);
+
+function timeDuration() {
+  let interval = setInterval(() => {
+    if (time<10) {
+      timeLeft.innerHTML = "Time Left 0" + time;
+    } else{
+      timeLeft.innerHTML = "Time Left " + time;
+    }
+    
+    time--;
+  }, 1000);
+
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 61800);
+}
+
+timeDuration()
