@@ -172,6 +172,8 @@
 
 body {
     background-color: gray;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 #title {
@@ -191,10 +193,19 @@ body {
 }
 
 .top-cards {
-    border: 1px solid black;
+    border: 3px solid black;
     margin: 0 auto;
     border-radius: 10px;
     text-align: center;
+    color: rgb(170, 255, 0);
+}
+
+.top-cards:hover{
+    background-color:rgb(68, 66, 66);
+}
+
+#emoji-card{
+    color:rgb(0, 255, 0);
 }
 
 #game-card-container {
@@ -205,7 +216,12 @@ body {
 }
 
 .game-cards {
-    border: 1px solid black;
+    border: 2px solid black;
     margin: 0 auto;
     background-color: transparent;
+    border-radius: 5px;
+}
+
+.game-cards:hover{
+    background-color: rgb(68, 66, 66);
 }
