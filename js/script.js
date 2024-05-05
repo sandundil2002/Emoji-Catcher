@@ -1,4 +1,5 @@
 let timeLeft = document.getElementById("time-card");
+let catchEmoji = document.getElementById("catch-imoji");
 let emoji1 = document.getElementById("emoji-1");
 let emoji2 = document.getElementById("emoji-2");
 let emoji3 = document.getElementById("emoji-3");
@@ -65,6 +66,7 @@ function display() {
 
 function timeDuration() {
   let interval = setInterval(() => {
+    if (time === "00") throw "exit";
     if (time<10) {
       timeLeft.innerHTML = "Time Left 0" + time;
     } else{
@@ -79,4 +81,9 @@ function timeDuration() {
   }, 61800);
 }
 
-timeDuration()
+timeDuration();
+
+addEventListener("click", function () {
+  console.log("Click");
+})
+
