@@ -1,7 +1,9 @@
+let yourScore = document.getElementById("score-card");
 let timeLeft = document.getElementById("time-card");
 const emojis = document.querySelectorAll(".emoji");
 let catched = "/assets/1690-love-face-emoji.gif";
-let realTime;
+let score = 0;
+let time = 60;
 
 const emojiSources = [
   "/assets/1690-love-face-emoji.gif",
@@ -16,12 +18,10 @@ const emojiSources = [
   "/assets/9197-skype-sleeping.gif",
 ];
 
-let time = 60;
-
-
 function randomizeEmojis() {
   emojis.forEach((emoji, index) => {
-    realTime = emoji.src = emojiSources[Math.floor(Math.random() * emojiSources.length)];
+    realTime = emoji.src =
+      emojiSources[Math.floor(Math.random() * emojiSources.length)];
   });
 }
 
@@ -51,10 +51,11 @@ function timeDuration() {
 timeDuration();
 
 function clickedBox() {
-
   if (catched == realTime) {
     console.log("catch");
-  } else {
-      console.log("missed");
+    score = score + 10;
+    yourScore.innerHTML = "Your Score " + score;
+  } else{
+    console.log("missed");
   }
 }
