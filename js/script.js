@@ -1,89 +1,55 @@
 let timeLeft = document.getElementById("time-card");
-let catchEmoji = document.getElementById("catch-imoji");
-let emoji1 = document.getElementById("emoji-1");
-let emoji2 = document.getElementById("emoji-2");
-let emoji3 = document.getElementById("emoji-3");
-let emoji4 = document.getElementById("emoji-4");
-let emoji5 = document.getElementById("emoji-5");
-let emoji6 = document.getElementById("emoji-6");
-let emoji7 = document.getElementById("emoji-7");
-let emoji8 = document.getElementById("emoji-8");
-let emoji9 = document.getElementById("emoji-9");
-let emoji10 = document.getElementById("emoji-10");
-let time = 60;
-let box1;
-let box2;
-let box3;
-let box4;
-let box5;
-let box6;
-let box7;
-let box8;
-let box9;
-let box10;
+const emojis = document.querySelectorAll(".emoji"); // Selects all elements with class "emoji"
 
-var emojiArray = [
-  emoji1,
-  emoji2,
-  emoji3,
-  emoji4,
-  emoji5,
-  emoji6,
-  emoji7,
-  emoji8,
-  emoji9,
-  emoji10,
+const emojiSources = [
+  "/assets/1690-love-face-emoji.gif",
+  "/assets/1396-money-mouth-emoji.gif",
+  "/assets/8112-scream-emoji.gif",
+  "/assets/4936-halo-emoji.gif",
+  "/assets/5218-cry-face-emoji.gif",
+  "/assets/6397-skypeloveheartcircle.gif",
+  "/assets/6670-skype-cool.gif",
+  "/assets/6686-hot-face-emoji.gif",
+  "/assets/6767-skype-tired.gif",
+  "/assets/9197-skype-sleeping.gif",
 ];
 
-function random() {
-  box1 = Math.floor(Math.random() * 11);
-  box2 = Math.floor(Math.random() * 11);
-  box3 = Math.floor(Math.random() * 11);
-  box4 = Math.floor(Math.random() * 11);
-  box5 = Math.floor(Math.random() * 11);
-  box6 = Math.floor(Math.random() * 11);
-  box7 = Math.floor(Math.random() * 11);
-  box8 = Math.floor(Math.random() * 11);
-  box9 = Math.floor(Math.random() * 11);
-  box10 = Math.floor(Math.random() * 11);
-  display()
+let time = 60;
+
+
+function randomizeEmojis() {
+  emojis.forEach((emoji, index) => {
+    emoji.src = emojiSources[Math.floor(Math.random() * emojiSources.length)];
+  });
 }
 
-function display() {
-  emojiArray[box1].setAttribute("src", "/assets/1690-love-face-emoji.gif");
-  emojiArray[box2].setAttribute("src", "/assets/1396-money-mouth-emoji.gif");
-  emojiArray[box3].setAttribute("src", "/assets/8112-scream-emoji.gif");
-  emojiArray[box4].setAttribute("src", "/assets/4936-halo-emoji.gif");
-  emojiArray[box5].setAttribute("src", "/assets/5218-cry-face-emoji.gif");
-  emojiArray[box6].setAttribute("src", "/assets/6397-skypeloveheartcircle.gif");
-  emojiArray[box7].setAttribute("src", "/assets/6670-skype-cool.gif");
-  emojiArray[box8].setAttribute("src", "/assets/6686-hot-face-emoji.gif");
-  emojiArray[box9].setAttribute("src", "/assets/6767-skype-tired.gif");
-  emojiArray[box10].setAttribute("src", "/assets/9197-skype-sleeping.gif");
-}
-
-// setInterval(random, 200);
+const intervalId = setInterval(() => {
+  randomizeEmojis();
+}, 200);
 
 function timeDuration() {
   let interval = setInterval(() => {
-    if (time === "00") throw "exit";
-    if (time<10) {
+    if (time === "00") {
+      clearInterval(intervalId);
+    }
+    if (time < 10) {
       timeLeft.innerHTML = "Time Left 0" + time;
-    } else{
+    } else {
       timeLeft.innerHTML = "Time Left " + time;
     }
-    
+
     time--;
   }, 1000);
 
   setTimeout(() => {
     clearInterval(interval);
-  }, 61800);
+  }, 62000);
 }
 
 timeDuration();
 
-addEventListener("click", function () {
-  console.log("Click");
-})
-
+function clickedBox() {
+  for (let i = 0; i < emojiArray.length; i++) {
+    console.log(emojiArray[i]);
+  }
+}
