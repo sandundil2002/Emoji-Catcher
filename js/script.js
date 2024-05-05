@@ -1,5 +1,7 @@
 let timeLeft = document.getElementById("time-card");
-const emojis = document.querySelectorAll(".emoji"); // Selects all elements with class "emoji"
+const emojis = document.querySelectorAll(".emoji");
+let catched = "/assets/1690-love-face-emoji.gif";
+let realTime;
 
 const emojiSources = [
   "/assets/1690-love-face-emoji.gif",
@@ -19,13 +21,13 @@ let time = 60;
 
 function randomizeEmojis() {
   emojis.forEach((emoji, index) => {
-    emoji.src = emojiSources[Math.floor(Math.random() * emojiSources.length)];
+    realTime = emoji.src = emojiSources[Math.floor(Math.random() * emojiSources.length)];
   });
 }
 
 const intervalId = setInterval(() => {
   randomizeEmojis();
-}, 200);
+}, 500);
 
 function timeDuration() {
   let interval = setInterval(() => {
@@ -43,13 +45,16 @@ function timeDuration() {
 
   setTimeout(() => {
     clearInterval(interval);
-  }, 62000);
+  }, 61800);
 }
 
 timeDuration();
 
 function clickedBox() {
-  for (let i = 0; i < emojiArray.length; i++) {
-    console.log(emojiArray[i]);
+
+  if (catched == realTime) {
+    console.log("catch");
+  } else {
+      console.log("missed");
   }
 }
