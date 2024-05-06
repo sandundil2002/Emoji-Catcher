@@ -19,7 +19,7 @@ const emojiSources = [
 ];
 
 function randomizeEmojis() {
-  emojis.forEach((emoji, index) => {
+  emojis.forEach((emoji) => {
     realTime = emoji.src =
       emojiSources[Math.floor(Math.random() * emojiSources.length)];
   });
@@ -32,8 +32,9 @@ const intervalId = setInterval(() => {
 function timeDuration() {
   let interval = setInterval(() => {
     if (time < 1) {
-      clearInterval(intervalId);
       alert("Game Over You Scored " + score + " Points");
+      time = 60;
+      resetScore()
     }
     if (time < 10) {
       timeLeft.innerHTML = "Time Left 0" + time;
@@ -59,4 +60,10 @@ function clickedBox() {
   } else {
     console.log("missed");
   }
+}
+
+function resetScore() {
+  score = 0;
+  yourScore.innerHTML = "Your Score " + score;
+  timeDuration();
 }
