@@ -31,8 +31,9 @@ const intervalId = setInterval(() => {
 
 function timeDuration() {
   let interval = setInterval(() => {
-    if (time === "00") {
+    if (time < 1) {
       clearInterval(intervalId);
+      alert("Game Over You Scored " + score + " Points");
     }
     if (time < 10) {
       timeLeft.innerHTML = "Time Left 0" + time;
@@ -55,7 +56,7 @@ function clickedBox() {
     console.log("catch");
     score = score + 10;
     yourScore.innerHTML = "Your Score " + score;
-  } else{
+  } else {
     console.log("missed");
   }
 }
