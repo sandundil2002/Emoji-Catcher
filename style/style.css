@@ -104,9 +104,9 @@
         font-size: 28px
     }
 
-        #catch-imoji {
-            width: 60%;
-        }
+    #catch-imoji {
+        width: 60%;
+    }
 
     .game-cards {
         width: 170px;
@@ -204,12 +204,12 @@ body {
     color: rgb(170, 255, 0);
 }
 
-.top-cards:hover{
-    background-color:rgb(68, 66, 66);
+.top-cards:hover {
+    background-color: rgb(68, 66, 66);
 }
 
-#emoji-card{
-    color:rgb(0, 255, 0);
+#emoji-card {
+    color: rgb(0, 255, 0);
 }
 
 #game-card-container {
@@ -226,6 +226,6 @@ body {
     border-radius: 5px;
 }
 
-.game-cards:hover{
+.game-cards:hover {
     background-color: rgb(68, 66, 66);
 }

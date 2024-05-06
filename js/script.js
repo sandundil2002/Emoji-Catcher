@@ -34,7 +34,7 @@ function timeDuration() {
     if (time < 1) {
       alert("Game Over You Scored " + score + " Points");
       time = 60;
-      resetScore()
+      resetScore();
     }
     if (time < 10) {
       timeLeft.innerHTML = "Time Left 0" + time;
@@ -54,11 +54,8 @@ timeDuration();
 
 function clickedBox() {
   if (catched == realTime) {
-    console.log("catch");
     score = score + 10;
     yourScore.innerHTML = "Your Score " + score;
-  } else {
-    console.log("missed");
   }
 }
 
