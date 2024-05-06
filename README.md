@@ -1,12 +1,12 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=70&pause=1000&center=true&vCenter=true&random=false&width=700&height=75&lines=Emoji+Catcher" alt="Typing SVG" /></a>
 
-<p align="center"><img src="https://i.ibb.co/N2WHctt/emoji-1.png" alt="project-image"></p>
+<p align="center"><img src="/assets/ss1.png" alt="project-image"></p>
 
 <p id="description">This JavaScript project implements a dynamic emoji game where emojis on the screen shuffle every 500 milliseconds. The objective is to keep track of the changing emojis and potentially interact with them</p>
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://i.ibb.co/6wTCHFL/emoji-2.png" alt="project-screenshot" width="800" height="600/">
+<img src="/assets/ss2.png" alt="project-screenshot" width="800" height="600/">
 
   
   
